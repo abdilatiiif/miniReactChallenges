@@ -1,7 +1,8 @@
 import "./App.css";
+import ProfileCard from "./ProfileCard";
 
 function App() {
-  return <h1>challenges:</h1>;
+  return <ProfileCard />;
 }
 
 export default App;
