@@ -1,8 +1,8 @@
 import "./App.css";
-import ProfileCard from "./ProfileCard";
+import DateCounter from "./DateCounter";
 
 function App() {
-  return <ProfileCard />;
+  return <DateCounter />;
 }
 
-export default App;
+export default App; 
