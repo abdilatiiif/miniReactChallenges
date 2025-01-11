@@ -17,12 +17,23 @@ export default function FlashCards() {
 }
 
 function Joke(props) {
+  const [show, setShow] = React.useState(false);
+
+  function handleClick() {
+    console.log("cliked");
+    setShow((prevShow) => !prevShow);
+  }
+
+  console.log(show);
+
   return (
-    <div className="border-b-4 border-orange-300">
-      <h3 className="py-3 mb-6 text-2xl bold">{props.joke.setup}</h3>
-      {props.show ? (
+    <div className="border-b-4 border-orange-300 cursor-pointer">
+      <h3 onClick={handleClick} className="py-3 mb-6 text-2xl bold">
+        {props.joke.setup}
+      </h3>
+      {show && (
         <p className="p-8 text-xl bg-green-500">{props.joke.punchline}</p>
-      ) : null}
+      )}
     </div>
   );
 }
@@ -33,4 +44,5 @@ Joke.propTypes = {
     punchline: PropTypes.string.isRequired,
   }).isRequired,
   show: PropTypes.bool.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
