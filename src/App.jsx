@@ -1,8 +1,8 @@
 import "./App.css";
-import DateCounter from "./DateCounter";
+import FlashCards from "./FlashCards";
 
 function App() {
-  return <DateCounter />;
+  return <FlashCards />;
 }
 
-export default App; 
+export default App;
