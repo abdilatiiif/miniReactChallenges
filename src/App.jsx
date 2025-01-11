@@ -1,8 +1,9 @@
 import "./App.css";
-import FlashCards from "./FlashCards";
+
+import TodoList from "./TodoList.jsx";
 
 function App() {
-  return <FlashCards />;
+  return <TodoList />;
 }
 
 export default App;
