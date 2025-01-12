@@ -7,6 +7,8 @@ export default function FlashCards() {
 
   const [show, setShow] = React.useState(false);
 
+  console.log(setJokes, setShow);
+
   return (
     <div>
       {jokes.map((joke, i) => (

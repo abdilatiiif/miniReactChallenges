@@ -1,9 +1,9 @@
 import "./App.css";
 
-import TodoList from "./TodoList.jsx";
+import Calculator from "./Calculator";
 
 function App() {
-  return <TodoList />;
+  return <Calculator />;
 }
 
 export default App;
