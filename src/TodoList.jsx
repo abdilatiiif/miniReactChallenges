@@ -2,7 +2,7 @@ import Form from "./Form.jsx";
 
 export default function TodoList() {
   return (
-    <div className="container mx-auto text-center bg-amber-600">
+    <div className="container mx-auto text-center bg-slate-600">
       <h1 className="text-4xl text-white"> 👉 Daily Work Objects 👈 </h1>
       <main>
         {/*liste navn*/}
