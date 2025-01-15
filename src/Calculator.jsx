@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Calculator() {
-  const [display, setDisplay] = React.useState("");
+  const [display, setDisplay] = React.useState("0");
   const [operator, setOperator] = React.useState(null);
   const [tall, setTall] = React.useState(null);
 
@@ -11,10 +11,36 @@ export default function Calculator() {
     console.log(value);
     setDisplay((prevDisplay) => prevDisplay + value);
 
+    console.log(parseFloat(display).toString());
+
     if (value === "AC") {
       setDisplay("");
       setOperator(null);
       setTall(null);
+    } else if (value === "=") {
+      if (operator && tall !== null) {
+        //const result = calculate(tall, )
+        console.log("print resultat");
+        const result = calculate(tall, parseFloat(display), operator);
+        console.log(result.toString());
+
+        // add more func
+      }
+    }
+  }
+
+  function calculate(tall1, tall2, operator) {
+    switch (operator) {
+      case "+":
+        return tall1 + tall2;
+      case "-":
+        return tall1 - tall2;
+      case "*":
+        return tall1 * tall2;
+      case "/":
+        return tall1 / tall2;
+      default:
+        return tall2;
     }
   }
 
